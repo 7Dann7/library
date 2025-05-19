@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="/src/output.css" rel="stylesheet" />
+</head>
+<body class='class="h-14 bg-linear-to-t from-sky-500 to-indigo-500"' bg-cover bg-no-repeat bg-center">
+    <!-- Navbar -->
+  <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 my-16">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <!-- Botón hamburguesa para sidebar -->
+      <button id="sidebarToggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg bg-white shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <span class="sr-only">Abrir sidebar</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+        </svg>
+      </button>
+      <a href="/" class="flex items-center space-x-1 rtl:space-x-reverse">
+        <img src="https://img.freepik.com/vector-premium/logotipo-libro-o-biblioteca-librerias-empresas-editoriales-editores-enciclopedias-bibliotecas-educacion_661040-9761.jpg?w=360" class="h-8" alt="Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap text-yellow-400">RAYMBOW</span><span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">LIBRARY</span>
+      </a>
+      <div class="flex md:order-2">
+        <button data-collapse-toggle="navbar-sticky" type="button" class="ml-2 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Menu</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 text-sm font-medium">
+          <li><a href="#" class="block py-2 px-3 text-blue-700"></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Sidebar -->
+<aside id="sidebar-multi-level-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 hidden" aria-label="Sidebar">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+      <ul class="space-y-2 font-medium">
+         <li>
+            
+              <img src="https://img.freepik.com/vector-premium/logotipo-libro-o-biblioteca-librerias-empresas-editoriales-editores-enciclopedias-bibliotecas-educacion_661040-9761.jpg?w=360" class="h-8" alt="Logo" />
+            </a>
+         </li>
+         
+         <li>
+            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+                  <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"/>
+               </svg>
+               <span class="flex-1 ms-3 whitespace-nowrap">Editoriales</span>
+               
+            </a>
+         </li>
+         
+         <li>
+            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                  <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
+               </svg>
+               <span class="flex-1 ms-3 whitespace-nowrap">Autores</span>
+            </a>
+         </li>
+         
+         <li>
+            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"/>
+               </svg>
+               <span class="flex-1 ms-3 whitespace-nowrap">Salir</span>
+            </a>
+         </li>
+         <
+      </ul>
+   </div>
+</aside>
+
+
+
+
+
+
+
+<div class="cards-container flex flex-wrap justify-center items-center gap-4 min-h-screen pt-32"> ">
+
+    
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm  dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+            <img class="w-96 h-96 object-cover rounded-t-lg" src="https://media.istockphoto.com/id/1475868329/es/vector/biblioteca-de-libros-de-texto-de-pila.jpg?s=612x612&w=0&k=20&c=n1hybX3IQGE3jJNMfkvo0BcEr_iubpbmZNciaCPA2RA="  alt="" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Categorias</h5>
+            </a>
+            
+            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Entrar
+             
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    
+    
+
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="w-96 h-96 object-cover rounded-t-lg" src="https://media.istockphoto.com/id/1496555628/es/vector/pila-de-libros-sobre-la-palabra-biblioteca-logotipo-para-la-biblioteca-muchos-libros-de.jpg?s=612x612&w=0&k=20&c=l56q8LGP4VurL_HkUqTPqlnPhmpE0RO6DKxDiKE56_k=" alt="" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">CRUD</h5>
+        </a>
+        
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Entrar
+             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </a>
+    </div>
+</div>
+
+
+
+<footer class="bg-white rounded-lg shadow-sm dark:bg-gray-900  w-full m-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="https://img.freepik.com/vector-premium/logotipo-libro-o-biblioteca-librerias-empresas-editoriales-editores-enciclopedias-bibliotecas-educacion_661040-9761.jpg?w=360" class="h-8" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Raymbow Library</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Acerca de</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Privacidad</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Uso</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contacto</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">Raimbow Libray™</a>Todos los derechos reservados</span>
+    </div>
+</footer>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script>
+  const sidebar = document.getElementById('sidebar-multi-level-sidebar');
+  const toggleBtn = document.getElementById('sidebarToggle');
+  let sidebarOpen = false;
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    sidebar.classList.toggle('hidden');
+    sidebarOpen = !sidebar.classList.contains('hidden');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (sidebarOpen && !sidebar.contains(e.target) && e.target !== toggleBtn) {
+      sidebar.classList.add('hidden');
+      sidebarOpen = false;
+    }
+  });
+</script>
+</body>
+</html>
